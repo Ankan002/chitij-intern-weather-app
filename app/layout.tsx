@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactQueryProvider, RecoilProvider } from "@/components/providers";
+import { InitialWeatherManager } from "@/components/common";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -16,7 +17,10 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<RecoilProvider>
-					<ReactQueryProvider>{children}</ReactQueryProvider>
+					<ReactQueryProvider>
+						<InitialWeatherManager />
+						{children}
+					</ReactQueryProvider>
 				</RecoilProvider>
 			</body>
 		</html>
