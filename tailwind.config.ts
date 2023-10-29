@@ -21,6 +21,9 @@ const config: Config = {
 				"primary-dark": "#232735",
 				"primary-gray": "#E0E1E6",
 			},
+			backgroundImage: {
+				mainBg: "url('/some.webp')",
+			},
 		},
 	},
 	plugins: [],

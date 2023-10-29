@@ -9,7 +9,7 @@ export const useHomeBody = () => {
 	const isAppLoaded = useRecoilValue<boolean>(appLoadedAtom);
 
 	return {
-		isWeatherLoading: true,
+		isWeatherLoading: !isAppLoaded,
 		weatherData: currentWeatherData,
 	};
 };

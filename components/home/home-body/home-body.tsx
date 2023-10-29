@@ -1,8 +1,7 @@
 "use client";
 
-import { HomeBodySkeleton } from "../elements";
+import { HomeBodySkeleton, TempSection } from "../elements";
 import { useHomeBody } from "./hook";
-import Skeleton from "react-loading-skeleton";
 
 const HomeBody = () => {
 	const { isWeatherLoading, weatherData } = useHomeBody();
@@ -13,7 +12,13 @@ const HomeBody = () => {
 				{isWeatherLoading ? (
 					<HomeBodySkeleton />
 				) : (
-					<></>
+					<>
+						{weatherData && (
+							<>
+								<TempSection weatherData={weatherData} />
+							</>
+						)}
+					</>
 				)}
 			</div>
 		</div>
