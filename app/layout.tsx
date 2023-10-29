@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "react-loading-skeleton/dist/skeleton.css";
 import "./globals.css";
 import { ReactQueryProvider, RecoilProvider } from "@/components/providers";
 import { InitialWeatherManager } from "@/components/common";
