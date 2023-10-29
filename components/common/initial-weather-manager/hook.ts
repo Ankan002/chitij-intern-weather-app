@@ -19,7 +19,6 @@ export const useInitialWeatherManager = async () => {
 		lat: latitude,
 		lng: longitude,
 		onSuccess: (data) => {
-			console.log(data);
 			setCurrentWeatherData(data);
 			setAppLoaded(true);
 		},
@@ -47,8 +46,6 @@ export const useInitialWeatherManager = async () => {
 
 			navigator.geolocation.getCurrentPosition(
 				(geoData) => {
-					console.log(geoData.coords.latitude.toPrecision(5));
-					console.log(geoData.coords.longitude.toPrecision(5));
 					setLatitude(geoData.coords.latitude.toPrecision(5));
 					setLongitude(geoData.coords.longitude.toPrecision(5));
 				},
