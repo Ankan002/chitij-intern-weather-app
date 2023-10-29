@@ -1,6 +1,6 @@
 "use client";
 
-import { HomeBodySkeleton, TempSection } from "../elements";
+import { HomeBodySkeleton, RestDataSection, TempSection } from "../elements";
 import { useHomeBody } from "./hook";
 
 const HomeBody = () => {
@@ -16,6 +16,7 @@ const HomeBody = () => {
 						{weatherData && (
 							<>
 								<TempSection weatherData={weatherData} />
+								<RestDataSection weatherData={weatherData} />
 							</>
 						)}
 					</>
